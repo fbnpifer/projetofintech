@@ -1,0 +1,86 @@
+/* tela1.css */
+
+/* Estilo do header */
+.header-dark {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 150px; /* Aumente o espaçamento inferior */
+    font-family: "Roboto", sans-serif; /* Altere para a fonte desejada */
+}
+
+/* Estilo dos botões */
+.list-group-item {
+    background-color: transparent; /* Remova o fundo cinza */
+    border: none;
+    border-radius: 0;
+    padding: 10px 20px;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 150px; /* Aumente o espaçamento inferior */
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Roboto", sans-serif; /* Altere para a fonte desejada */
+    color: #0000ff; /* Altere para a cor desejada */
+}
+
+/* Estilo dos textos explicativos */
+.explanation {
+    background-color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    display: none;
+}
+
+/* Estilo dos checkboxes */
+.accordion-toggle {
+    display: none;
+}
+
+/* Estilo dos rótulos (labels) */
+.list-group-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-left: -30px;
+}
+
+/* Estilo do texto explicativo quando checkbox estiver selecionado */
+.accordion-toggle:checked + .list-group-item {
+    background-color: transparent; /* Remova o fundo cinza */
+    color: #0000ff; /* Altere para a cor desejada */
+}
+
+.accordion-toggle:checked + .list-group-item::before {
+    background-color: #000;
+}
+
+.accordion-toggle:checked ~ .explanation {
+    display: block;
+}
+
+/* Estilo para o espaçamento uniforme entre os botões */
+.list-group {
+    margin-bottom: 40px; /* Aumente o espaçamento inferior */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Ajuste para flex-start */
+}
+
+.list-group-item {
+    flex-basis: calc(33.33% - 20px); /* Um botão por linha com espaçamento */
+}
+
+.header-dark {
+    margin-bottom: 40px; /* Aumente o espaçamento inferior */
+}
